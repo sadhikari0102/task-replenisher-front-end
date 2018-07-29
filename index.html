@@ -12,7 +12,7 @@
 	<script src="angular.js"></script>
 	<script src="./app.js"></script>
 	<script src="task.service.js"></script>
-	<!-- Header CSS --> 
+	<!-- Header CSS -->
 	  <meta charset="utf-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -22,7 +22,7 @@
 
 <body>
 	<div class="jumbotron" class="wrap" >
-	    	<h1 align="center">Task Replinisher</h1>      
+	    	<h1 align="center">Task Replinisher</h1>
 	    	<p align="center">Manage your tasks here!</p>
   	</div>
 	<div class="container" ng-controller = "TaskCtrl as mctrl">
@@ -43,13 +43,13 @@
 	  <button type="button" type="submit" class="btn btn-primary" ng-click="mctrl.submit()">Submit</button>
 	</form>
 
-	<!--- After Login --> 
+	<!--- After Login -->
 	<div class="row" ng-show = "mctrl.loginSuccess">
 		<div class="col-md-3" ng-controller = "UserCtrl as ctrl">
 			<h4>User Details</h4>
 			<ul class="list-group">
 				<li class="list-group-item" ng-repeat= "info in ctrl.name">
-					<span>{{info}}</span> 
+					<span>{{info}}</span>
 				</li>
 				</ul>
 		</div>
@@ -68,7 +68,7 @@
 						      <th scope="col">Assigned To</th>
 						      <th scope="col">Start</th>
 						      <th scope="col">Finish</th>
-						      
+
 						    </tr>
 						  </thead>
 						  <tbody>
@@ -80,17 +80,17 @@
 						        <td>{{task.endTime}}</td>
 						        <td>{{task.createdBy.name}}</td>
 						        <td>{{task.assignedTo.name}}</td>
-						      	<td> 
+						      	<td>
 						      		<button class="btn btn-primary" ng-click="mctrl.startTask($index)">Start</button>
 						      	</td>
-						      	<td> 
+						      	<td>
 						      		<button class="btn btn-success" ng-click="mctrl.endTask($index)">Done!</button>
 						      	</td>
 						    </tr>
 						</tbody>
 					</table>
 					<button class="btn btn-secondary" ng-click="mctrl.turnOnEdit()">Create Task</button>
-					<div class="container" ng-hide = "!mctrl.editOn"> 
+					<div class="container" ng-hide = "!mctrl.editOn">
 						<p>Description : <input type="text" ng-model = "mctrl.selectedTask.description"></input></p>
 						<p>Priority : <input type="text" ng-model = "mctrl.selectedTask.priority"></input></p>
 						<p>End Time : <input type="text" ng-model = "mctrl.selectedTask.endTime" ></input></p>
@@ -103,7 +103,7 @@
 			</div>
 
 		</div>
-		
+
 	</div>
 </div>
 </body>
