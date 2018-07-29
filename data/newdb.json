@@ -1,0 +1,130 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "taskId": 4,
+      "description": "dance",
+      "status": "STARTED",
+      "priority": 1,
+      "startTime": null,
+      "endTime": "2018-07-29T02:01:30.000+0000",
+      "createdBy": {
+        "id": 4,
+        "password": "pass",
+        "name": "individual1",
+        "role": {
+          "role": "INDIVIDUAL"
+        }
+      },
+      "assignedTo": {
+        "id": 4,
+        "password": "pass",
+        "name": "individual1",
+        "role": {
+          "role": "INDIVIDUAL"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "taskId": 74,
+      "description": "sing",
+      "status": "FINISHED",
+      "priority": 7,
+      "startTime": null,
+      "endTime": "2018-07-29T02:01:30.000+0000",
+      "createdBy": {
+        "id": 4,
+        "password": "pass",
+        "name": "daniel",
+        "role": {
+          "role": "INDIVIDUAL"
+        }
+      },
+      "assignedTo": {
+        "id": 4,
+        "password": "pass",
+        "name": "simran",
+        "role": {
+          "role": "INDIVIDUAL"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "taskId": 90,
+      "description": "eat",
+      "status": "STARTED",
+      "priority": 2,
+      "startTime": null,
+      "endTime": "2018-07-29T02:01:30.000+0000",
+      "createdBy": {
+        "id": 4,
+        "password": "pass",
+        "name": "sanjay",
+        "role": {
+          "role": "INDIVIDUAL"
+        }
+      },
+      "assignedTo": {
+        "id": 4,
+        "password": "pass",
+        "name": "nate",
+        "role": {
+          "role": "INDIVIDUAL"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "taskId": 15,
+      "description": "eat",
+      "status": "FINISHED",
+      "priority": 5,
+      "startTime": null,
+      "endTime": "2018-07-29T02:01:30.000+0000",
+      "createdBy": {
+        "id": 4,
+        "password": "pass",
+        "name": "sanjay",
+        "role": {
+          "role": "INDIVIDUAL"
+        }
+      },
+      "assignedTo": {
+        "id": 4,
+        "password": "pass",
+        "name": "jon",
+        "role": {
+          "role": "INDIVIDUAL"
+        }
+      }
+    },
+    {
+      "createdBy": {
+        "name": "sanjay"
+      },
+      "description": "hello",
+      "priority": "4",
+      "endTime": "2018-07-29T02:01:30.000+0000",
+      "assignedTo": {
+        "name": "ria"
+      },
+      "status": "CREATED",
+      "id": 5
+    },
+    {
+      "createdBy": {
+        "name": "sanjay"
+      },
+      "description": "buy grocery",
+      "priority": "6",
+      "endTime": "2018-08-29T02:01:30.000+0000",
+      "assignedTo": {
+        "name": "cathy"
+      },
+      "status": "CREATED",
+      "id": 6
+    }
+  ]
+}

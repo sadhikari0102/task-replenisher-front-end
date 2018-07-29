@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html ng-app = "TasksApp">
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<title>Task List</title>
+	<script src="angular.js"></script>
+	<script src="./app.js"></script>
+	<script src="task.service.js"></script>
+	<!-- Header CSS --> 
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="jumbotron" class="wrap" >
+	    	<h1 align="center">Task Replinisher</h1>      
+	    	<p align="center">Manage your tasks here!</p>
+  	</div>
+	<div class="container" ng-controller = "TaskCtrl as mctrl">
+	<form ng-hide= "mctrl.loginSuccess">
+	  <div class="form-group">
+	    <label for="exampleInputEmail1">Username</label>
+	    <input class="form-control" id="exampleInputEmail1" placeholder="Enter username" ng-model="mctrl.username">
+	    <small id="emailHelp" class="form-text text-muted">We'll never share your username with anyone else.</small>
+	  </div>
+	  <div class="form-group">
+	    <label for="exampleInputPassword1">Password</label>
+	    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" ng-model="mctrl.password">
+	  </div>
+	  <div class="form-group form-check">
+	    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+	    <label class="form-check-label" for="exampleCheck1"> Check me out</label>
+	  </div>
+	  <button type="button" type="submit" class="btn btn-primary" ng-click="mctrl.submit()">Submit</button>
+	</form>
+
+	<!--- After Login --> 
+	<div class="row" ng-show = "mctrl.loginSuccess">
+		<div class="col-md-3" ng-controller = "UserCtrl as ctrl">
+			<h4>User Details</h4>
+			<ul class="list-group">
+				<li class="list-group-item" ng-repeat= "info in ctrl.name">
+					<span>{{info}}</span> 
+				</li>
+				</ul>
+		</div>
+		<div class="col-md-9" >
+			<div >
+				<h4>Assigned Tasks </h4>
+				<table class="table" >
+		  				<thead class="thead-dark">
+		    				<tr>
+						      <th scope="col">Description</th>
+						      <th scope="col">Status</th>
+						      <th scope="col">Priority</th>
+						      <th scope="col">Start Time</th>
+						      <th scope="col">End Time</th>
+						      <th scope="col">Created By</th>
+						      <th scope="col">Assigned To</th>
+						      <th scope="col">Start</th>
+						      <th scope="col">Finish</th>
+						      
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr ng-repeat="task in mctrl.tasks">
+						      <td>{{task.description}}</td>
+						       <td >{{task.status}}</td>
+						        <td>{{task.priority}}</td>
+						        <td>{{task.startTime}}</td>
+						        <td>{{task.endTime}}</td>
+						        <td>{{task.createdBy.name}}</td>
+						        <td>{{task.assignedTo.name}}</td>
+						      	<td> 
+						      		<button class="btn btn-primary" ng-click="mctrl.startTask($index)">Start</button>
+						      	</td>
+						      	<td> 
+						      		<button class="btn btn-success" ng-click="mctrl.endTask($index)">Done!</button>
+						      	</td>
+						    </tr>
+						</tbody>
+					</table>
+					<button class="btn btn-secondary" ng-click="mctrl.turnOnEdit()">Create Task</button>
+					<div class="container" ng-hide = "!mctrl.editOn"> 
+						<p>Description : <input type="text" ng-model = "mctrl.selectedTask.description"></input></p>
+						<p>Priority : <input type="text" ng-model = "mctrl.selectedTask.priority"></input></p>
+						<p>End Time : <input type="text" ng-model = "mctrl.selectedTask.endTime" ></input></p>
+						<p>Assigned To : <input type="text" ng-model = "mctrl.selectedTask.assignedTo.name" ></input></p>
+						<p>Created By : <input type="text" ng-model = "mctrl.selectedTask.createdBy.name" ></input></p>
+
+					<button class="btn btn-secondary" ng-click="mctrl.createTask()">Done!</button>
+					</div>
+
+			</div>
+
+		</div>
+		
+	</div>
+</div>
+</body>
+</html>
