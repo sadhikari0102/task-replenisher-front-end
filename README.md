@@ -46,7 +46,7 @@ Once you have installed the pre-requisites, you can test the app by following th
 ```
 http-server
 ```
-![alt text](screenshots/http.png "HTTP server started")
+![alt text](screenshots/http.PNG "HTTP server started")
 
 Now the http server will serve this directory over the given uri
 http://127.0.0.1:8080/
@@ -55,7 +55,7 @@ http://127.0.0.1:8080/
 ```
 json-server newdb.json
 ```
-![alt text](screenshots/jsonDb.png "JSON database started")
+![alt text](screenshots/jsonDb.PNG "JSON database started")
 
 4. Now you can go to the uri where the application is running and you would see a log in page
 ![alt text](screenshots/login.png "Login Screen")

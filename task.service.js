@@ -5,8 +5,8 @@
 
 		/*
 		self.getTasks = function (auth) {
-			console.log(auth.username);
-			console.log(auth.password);
+			console.log(auth[0].username);
+			console.log(auth[1].password);
 			var promise1 = $http.get('http://18.218.226.1:8080/authorized/tasks', {
        headers: {
            withCredentials: true,

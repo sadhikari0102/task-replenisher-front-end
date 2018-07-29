@@ -29,12 +29,15 @@ function TaskCtrl(TaskDataSvc) {
 
 	//update status
 	this.startTask = function(index) {
+    this.tasks[index].startTime = new Date();
+		this.tasks[index].endTime = "";
 		this.tasks[index].status = "STARTED" ;
 		var taskData = this.tasks[index] ;
 		TaskDataSvc.saveTask(taskData); //put
 	}
 
 	this.endTask = function(index) {
+    this.tasks[index].endTime = new Date() ;
 		this.tasks[index].status = "FINISHED" ;
 		var taskData = this.tasks[index] ;
 		TaskDataSvc.saveTask(taskData);
@@ -52,6 +55,8 @@ function TaskCtrl(TaskDataSvc) {
 	}
 	//post
 	this.createTask = function() {
+      this.selectedTask.startTime = "";
+			this.selectedTask.endTime = "";
 			this.selectedTask.status = "CREATED";
 			//this.selectedTask.createdBy.name = this.username ;
 			this.tasks.push(this.selectedTask);
