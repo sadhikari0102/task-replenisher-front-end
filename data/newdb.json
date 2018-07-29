@@ -1,0 +1,78 @@
+
+{	
+	"tasks" : [
+    {
+        "taskId": 4,
+        "description": "dance",
+        "status": "FINISHED",
+        "priority": "high",
+        "startTime": null,
+        "endTime": "2018-07-29T02:01:30.000+0000",
+        "createdBy": {
+            "id": 4,
+            "password": "pass",
+            "name": "individual1",
+            "role": {
+                "role": "INDIVIDUAL"
+            }
+        },
+        "assignedTo": {
+            "id": 4,
+            "password": "pass",
+            "name": "individual1",
+            "role": {
+                "role": "INDIVIDUAL"
+            }
+        }
+    }, 
+
+    {
+        "taskId": 74,
+        "description": "sing",
+        "status": "FINISHED",
+        "priority": "high",
+        "startTime": null,
+        "endTime": "2018-07-29T02:01:30.000+0000",
+        "createdBy": {
+            "id": 4,
+            "password": "pass",
+            "name": "ankkita",
+            "role": {
+                "role": "INDIVIDUAL"
+            }
+        },
+        "assignedTo": {
+            "id": 4,
+            "password": "pass",
+            "name": "sanjay",
+            "role": {
+                "role": "INDIVIDUAL"
+            }
+        }
+    }, 
+    {
+        "taskId": 90,
+        "description": "eat",
+        "status": "FINISHED",
+        "priority": "high",
+        "startTime": null,
+        "endTime": "2018-07-29T02:01:30.000+0000",
+        "createdBy": {
+            "id": 4,
+            "password": "pass",
+            "name": "sanjay",
+            "role": {
+                "role": "INDIVIDUAL"
+            }
+        },
+        "assignedTo": {
+            "id": 4,
+            "password": "pass",
+            "name": "manjay",
+            "role": {
+                "role": "INDIVIDUAL"
+            }
+        }
+    }
+]
+}
