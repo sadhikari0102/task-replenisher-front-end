@@ -55,6 +55,7 @@ function TaskCtrl(TaskDataSvc) {
 	}
 	//post
 	this.createTask = function() {
+      this.selectedTask.id = new Date().toString();
       this.selectedTask.startTime = "";
 			this.selectedTask.endTime = "";
 			this.selectedTask.status = "CREATED";
